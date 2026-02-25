@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { skillCategories } from "@/data/skills";
 import { projects } from "@/data/projects";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import { Section } from "@/components/Section";
 import { ProjectCard } from "@/components/ProjectCard";
 
@@ -39,7 +38,6 @@ export default function Home() {
                 Contact
               </Link>
             </nav>
-            <ThemeToggle />
           </div>
         </div>
       </header>
