@@ -27,23 +27,25 @@ export function ProjectCard({ project }: Props) {
         </div>
       </div>
       <div className="mt-4 flex gap-3 text-xs font-medium text-slate-600 dark:text-slate-300">
-        <Link
+        <a
           href={project.github}
           target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-1 hover:text-sky-600 dark:hover:text-sky-400"
         >
           <span>Code</span>
           <span aria-hidden="true">↗</span>
-        </Link>
+        </a>
         {project.live && project.live.trim().length > 0 && (
-          <Link
+          <a
             href={project.live}
             target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-1 hover:text-sky-600 dark:hover:text-sky-400"
           >
             <span>Live</span>
             <span aria-hidden="true">↗</span>
-          </Link>
+          </a>
         )}
       </div>
     </article>

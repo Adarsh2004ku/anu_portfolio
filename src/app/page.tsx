@@ -16,7 +16,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-col bg-gradient-to-b from-slate-50 to-slate-100 text-slate-900 dark:from-slate-950 dark:to-slate-900 dark:text-slate-50">
       <header className="sticky top-0 z-20 border-b border-slate-200 bg-slate-50/80 backdrop-blur dark:border-slate-800 dark:bg-slate-950/80">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
-          <Link href="#hero" className="font-semibold tracking-tight">
+          <Link href="#hero" prefetch={false} className="font-semibold tracking-tight">
             <span className="text-slate-900 dark:text-slate-50">
               Anuradha
             </span>
@@ -26,16 +26,16 @@ export default function Home() {
           </Link>
           <div className="flex items-center gap-4">
             <nav className="hidden gap-4 text-sm text-slate-600 dark:text-slate-300 sm:flex">
-              <Link href="#about" className="hover:text-sky-600 dark:hover:text-sky-400">
+              <Link href="#about" prefetch={false} className="hover:text-sky-600 dark:hover:text-sky-400">
                 About
               </Link>
-              <Link href="#skills" className="hover:text-sky-600 dark:hover:text-sky-400">
+              <Link href="#skills" prefetch={false} className="hover:text-sky-600 dark:hover:text-sky-400">
                 Skills
               </Link>
-              <Link href="#projects" className="hover:text-sky-600 dark:hover:text-sky-400">
+              <Link href="#projects" prefetch={false} className="hover:text-sky-600 dark:hover:text-sky-400">
                 Projects
               </Link>
-              <Link href="#contact" className="hover:text-sky-600 dark:hover:text-sky-400">
+              <Link href="#contact" prefetch={false} className="hover:text-sky-600 dark:hover:text-sky-400">
                 Contact
               </Link>
             </nav>
@@ -67,12 +67,14 @@ export default function Home() {
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="#projects"
+                  prefetch={false}
                   className="rounded-full bg-sky-600 px-5 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-sky-500 hover:shadow-md dark:bg-sky-500 dark:hover:bg-sky-400"
                 >
                   View Projects
                 </Link>
                 <Link
                   href="#contact"
+                  prefetch={false}
                   className="rounded-full border border-slate-300 px-5 py-2 text-sm font-medium text-slate-800 transition hover:border-sky-500 hover:text-sky-600 dark:border-slate-700 dark:text-slate-100 dark:hover:border-sky-400 dark:hover:text-sky-300"
                 >
                   Get in Touch
@@ -159,27 +161,29 @@ export default function Home() {
               if you think I could be a good fit for your team.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link
+              <a
                 href={EMAIL}
                 className="rounded-full bg-sky-600 px-5 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-sky-500 hover:shadow-md dark:bg-sky-500 dark:hover:bg-sky-400"
               >
                 Email
-              </Link>
-              <Link
+              </a>
+              <a
                 href={GITHUB_URL}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full border border-slate-300 px-5 py-2 text-sm font-medium text-slate-800 transition hover:border-sky-500 hover:text-sky-600 dark:border-slate-700 dark:text-slate-100 dark:hover:border-sky-400 dark:hover:text-sky-300"
               >
                 GitHub
-              </Link>
-              <Link
+              </a>
+              <a
                 href={LINKEDIN_URL || "#"}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full border border-slate-300 px-5 py-2 text-sm font-medium text-slate-800 transition hover:border-sky-500 hover:text-sky-600 disabled:cursor-not-allowed disabled:opacity-60 dark:border-slate-700 dark:text-slate-100 dark:hover:border-sky-400 dark:hover:text-sky-300"
                 aria-disabled={!LINKEDIN_URL}
               >
                 LinkedIn (coming soon)
-              </Link>
+              </a>
             </div>
           </div>
         </Section>
@@ -196,6 +200,7 @@ export default function Home() {
             <Link
               href={GITHUB_URL}
               target="_blank"
+              prefetch={false}
               className="hover:text-sky-600 dark:hover:text-sky-400"
             >
               GitHub
