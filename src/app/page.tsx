@@ -7,8 +7,10 @@ import { Section } from "@/components/Section";
 import { ProjectCard } from "@/components/ProjectCard";
 
 const GITHUB_URL = "https://github.com/krianuradha";
-const LINKEDIN_URL = ""; // TODO: add LinkedIn URL here when available
-const EMAIL = "mailto:your-email@example.com"; // TODO: replace with real email
+// You can change these later if your contact details change.
+const LINKEDIN_URL =
+  "https://www.linkedin.com/in/kumari-anuradha-8b66a92ba/";
+const EMAIL = "mailto:kumarianuradhax2004@gmail.com";
 
 export default function Home() {
   return (
